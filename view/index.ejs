@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav
+      style="
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+      "
+    >
+      <h1 style="">Khatabook</h1>
+      <div style="">
+        <ul style="display: flex; list-style: none; gap: 20px">
+          <li>
+            <a href="/" style="text-decoration: none; color: black">Home</a>
+          </li>
+          <li>
+            <a href="khatabook" style="text-decoration: none; color: black"
+              >Creat New Hisab</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div>
+      <h1>All Hisab Kitab</h1>
+
+      <%files.forEach(function(file){ %>
+        <h3><%= file %></h3>
+        <a href="/edit/<%= file %>">edit</a>
+      <% }) %>  
+
+      <div
+        style="
+          display: flex;
+          align-items: center;
+          width: 30%;
+          gap: 10px;
+          border: 1px solid rgb(234, 38, 38);
+          margin: 20px;
+          padding: 10px;
+        "
+      >
+        <h2>Hisab Name</h2>
+        <p>Details about the hisab...</p>
+        <button style="height: 40px; width: 100px">edit Details</button>
+        <button style="height: 40px; width: 100px">delet Details</button>
+      </div>
+    </div>
+  </body>
+</html>
